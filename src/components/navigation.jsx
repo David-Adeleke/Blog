@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <nav className = 'navigation'>
       <NavLink
-        className='blog-link'
+        className='nav-link'
         to={'/'}
         style={({ isActive }) =>
           isActive ? { color: 'red' } : { color: 'black' }

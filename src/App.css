@@ -9,8 +9,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  font-size: 6em;
+}
+
+.nav-link {
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 /*!!!!!!!!!!!!!
@@ -23,6 +31,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .blog-card {
@@ -39,11 +49,12 @@ header {
   font-family: 'Poppins';
   font-size: 1.5rem;
   font-style: italic;
-  min-height: 2.5em;
+  line-height: 1.5;
+  min-height: 3.5em; /* adjust to align the paragraphs below vertically*/
 }
 
 .blog-card p {
-  min-height: 5em;
+  min-height: 6em;
   line-height: 1.5;
   color: rgb(136, 136, 124);
 }
@@ -69,10 +80,17 @@ header {
 .blog-detail-container {
   display: flex;
   flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .blog-title {
   align-self: center;
+  font-size: 4em;
+}
+
+.blog-content {
+  font-size: 2em;
 }
 
 /*!!!!!!!!!!!!!
@@ -130,4 +148,49 @@ header {
   margin-top: 7rem;
   font-size: 3rem;
   font-weight: 700;
+}
+
+
+/*!!!!!!!!!!!!!
+ 
+  RESPONSIVENESS 
+
+ !!!!!!!!!!!!!!*/
+
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 4em;
+  }
+  
+  .nav-link {
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .blogs-container {
+    max-width: 90%;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .blog-card {
+    flex: 0 0 calc(50% - 2rem);
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .blog-card h1 {
+    min-height: 0em; /* adjust to align the paragraphs below vertically*/
+  }
+}
+
+@media (max-width: 800px) {
+  .blog-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .blog-card h1 {
+    min-height: 0em; /* adjust to align the paragraphs below vertically*/
+  }
 }
