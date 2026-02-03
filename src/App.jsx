@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-// import BlogPosts from './components/blogPosts';
-// import BlogDetail from './components/blogDetail';
 import Loading from './components/loading';
 import './App.css';
 
